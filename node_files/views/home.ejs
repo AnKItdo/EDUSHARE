@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style=background-color:#dfd6f6;"text-align:center">
+
+
+ <%- include C:\Users\dell\Desktop\edushare\views\partials\header.ejs -%>
+
+
+ <h1><p> <%= StartingContent %> </p></h1>
+  <% console.log(posts);%>
+   <% posts.forEach(function(post){ %>
+
+    <h1><%=post.title %></h1>
+    <p><%=post.content.substring(0,100) + "..." %>
+
+<a href="/posts/<%=post._id%>">Read More</a>
+    </p>
+
+  <% }) %>
+
+
+
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;    >
+
+      <div class="navbar-nav ">
+        <a class="nav-item nav-link active" href="/about">About Us </a>
+        <a class="nav-item nav-link active" href="/contacts">Contacts</a>
+         <a class="nav-item nav-link active" href="#">TermsContacts</a>
+            <a class="nav-item nav-link active" href="#">Privacy</a>
+
+    </div>
+  </nav>
+
+</body>
+</html>
